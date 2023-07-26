@@ -1,6 +1,6 @@
 ## SortedLinkedList PHP Library
 
-The SortedLinkedList PHP library provides an implementation of a linked list that keeps its elements sorted in alphanumeric order. It allows you to store either string or integer values in the list. This library ensures efficient insertion, deletion, and search operations while maintaining the sorted order of elements.
+The SortedLinkedList PHP library provides an implementation of a single linked list that keeps its elements sorted in alphanumeric order. It allows you to store either string or integer values in the list. This library ensures efficient insertion, deletion, and search operations while maintaining the sorted order of elements.
 
 ### Getting Started
 
@@ -74,3 +74,6 @@ $sortedList->printList(); // Output: 10 30 40
 
 - The SortedLinkedList class supports both string and integer values. When inserting elements, the list must maintain its sorted order based on alphanumeric comparisons.
 - For the delete() function, only the first occurrence of the specified value will be removed if it exists.
+- This library is mainly for educational purposes. It is not recommended to use this library in production environments. The best practice is to use the built-in array functions in PHP to perform operations on arrays or use the built-in SPL data structures like SplDoublyLinkedList which is a doubly linked list that allows you to insert elements at the beginning or end of the list and is implemented in C for better performance.
+- If you have read all the way to this point, thank you for your time and interest in hiring me for this position. I look forward to hearing from you soon.
+- **Fun fact**: my brother-in-law is a software engineer at Guri.ai company in California, USA. He told me he is in regular contact with you for integration of the Guri.ai API with the company's website. Small world :)
