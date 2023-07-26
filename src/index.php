@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/SortedLinkedList.php';
-require_once __DIR__ . '/Node.php';
 
 use src\SortedLinkedList;
 
@@ -23,13 +22,9 @@ echo $list->search('apple')->data;
 echo "\n";
 echo $list->get(1);
 echo "\n";
+
 $newArray = $list->toArray();
 print_r($newArray);
+
 $list->clear();
 echo $list->isEmpty()? 'true' : 'false';
-echo "\n";
-
-
-
-
-
