@@ -1,12 +1,11 @@
 <?php
 declare(strict_types=1);
 namespace tests;
-require __DIR__ . "/../src/lib/Node.php";
-require __DIR__ . "/../src/lib/SortedLinkedList.php";
+require __DIR__ . "/../src/SortedLinkedList.php";
 
-use lib\Node;
-use lib\SortedLinkedList;
 use PHPUnit\Framework\TestCase;
+use src\Node;
+use src\SortedLinkedList;
 
 final class LinkedListTest extends TestCase
 {
@@ -93,9 +92,13 @@ final class LinkedListTest extends TestCase
     public function testIfTypeIsDefinedAnotherTypeWillThrowError(): void
     {
         $this->expectExceptionMessage("Data type must be the same as the rest of the list = 'integer'");
-        $list = new SortedLinkedList();
-        $list->insert(1);
-        $list->insert("1");
+        $intList = new SortedLinkedList();
+        $intList->insert(1);
+        $intList->insert("1");
+        $this->expectExceptionMessage("Data type must be the same as the rest of the list = 'string'");
+        $stringList = new SortedLinkedList();
+        $stringList->insert("1");
+        $stringList->insert(1);
     }
 
     public function testSecondNodeIsInsertedAfterFirstNode(): void
